@@ -37,8 +37,21 @@
 ## if문
 
 ```
-if [ 조건식 ]
+if [ 조건식 ] 또는 ((수식: 내부에서 띄어쓰기 가능))
 then
+  명령어 리스트
+else
+  명령어리스트
+fi
+
+# 중첩 조건문
+if 조건식
+then
+  명령어 리스트
+elif 조건식
+then
+  명령어 리스트
+else
   명령어 리스트
 fi
 ```
@@ -68,6 +81,10 @@ else
   명령어 리스트
 fi
 ```
+
+### wc2_if 실습결과
+
+<img width="575" alt="wc2" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/6be8c58f-badf-4b42-9527-b924d3ed11af">
 
 ### count1 실습 결과
 
@@ -120,4 +137,86 @@ $ a=`expt 2 + 3`
 $ let a=2*3
 $ echo $a
 -> 6
+```
+
+## 변수 타입선언: declare
+
+| 이름                | 의미                                           |
+| ------------------- | ---------------------------------------------- |
+| declare -r          | 읽기 전용 변수로 선언                          |
+| declare -i          | 정수형 변수로 선언                             |
+| declare -a          | 배열 변수로 선언                               |
+| declare -f          | 스크립트 안에서 정의된 모든 함수들을 보여준다. |
+| declare -f 함수이름 | 해당 함수 이름을 보여준다                      |
+| declare -x 변수     | 환경변수로 export                              |
+
+### 중첩 조건문: score 실습결과
+
+<img width="543" alt="score" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/4946dff1-20fe-4a62-aa8e-a978e78972c0">
+
+## 스위치
+
+```
+case $변수 in
+  패턴1) 명령어리스트;;
+  패턴2) 명령어리스트;;
+  ...
+  *) 명령어리스트;;
+esac
+```
+
+## score2 실습결과
+
+<img width="517" alt="score2" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/7efcd332-88d8-483b-89ed-87d65e3e25fa">
+
+## for 구문
+
+```
+for 이름 in 단어리스트
+do
+  명령어리스트
+done
+
+# 모든 명령줄 인수 처리
+for file in $*
+do
+...
+done
+```
+
+### invite 실습결과
+
+<img width="522" alt="image" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/f2f1f931-c30a-4cfb-9c8c-f3c466d29f00">
+
+### perm1 실습결과
+
+<img width="645" alt="perm1" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/2b989748-0f76-4569-a1d5-b37c389a024d">
+
+## while
+
+```
+while 조건식
+do
+  명령어리스트
+done
+```
+
+### power 실습결과
+
+<img width="512" alt="power" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/0462207d-3cb0-42ed-91de-baf70484da0f">
+
+### 구구단 실습결과
+
+<img width="531" alt="구구단" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/b46ab5b9-05c5-4536-89f9-63e4ca6caf0f">
+
+## 함수정의
+
+```
+함수이름()
+{
+  명령어리스트
+}
+
+# 함수 호출
+함수이름 [매개변수]
 ```
