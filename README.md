@@ -220,3 +220,48 @@ done
 # 함수 호출
 함수이름 [매개변수]
 ```
+
+### lshead 실습 결과
+
+<img width="595" alt="lshead" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/375495ea-20fc-434f-8304-6f2d4a355a68">
+
+## 디버깅
+
+```
+$ bash -vx 스크립트 [명령줄 인수]
+```
+
+## shift
+
+```
+shift [리스트 변수]
+```
+
+: 명령줄 인수 내의 원소들을 하나씩 왼쪽으로 이동
+
+### perm2 실습 결과
+
+<img width="640" alt="perm2" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/cf140a50-b792-444c-90da-1beba5d5d975">
+
+## 디렉터리 내의 모든 파일 처리
+
+: for 문과 대표 문자 \*를 사용
+
+```
+for filr in *
+do
+  ...
+then
+```
+
+### count2 실습 결과
+
+<img width="662" alt="count2" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/21f870e5-2568-4463-be75-87e13659d415">
+
+## 리커전(recursion)
+
+: 스크립트로 자기 자신을 호출 가능하다. 어떤 디렉티의 모든 하위 디렉터리에 대해 동일한 작업을 수행할 때 유용하다.
+
+### rhead 실습 결과
+
+<img width="593" alt="rhead" src="https://github.com/chanhocode/SCH_OpenSrcSW/assets/105937460/275b02e0-d87e-4d79-b58a-29229e5ec379">
